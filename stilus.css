@@ -1,0 +1,144 @@
+body{
+    background-image: url(Képek/redmoon.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    max-width: 1000px;
+    margin: auto;
+    display:grid;
+    background: #350200;
+    grid-template-areas:"h  h  h" 
+                        "n  n  n"
+                        "a  a  a"
+                        "as as as"
+                        "s  s  s"
+                        "f  f  f";
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+header{
+    text-align: center;
+    grid-area: h;
+    background-image: url(Képek/killers.jpg);
+    background-position: center;
+    height: 300px;
+    grid-area: h;
+}
+
+article{
+    grid-area: a;
+    background-color: #350200;
+
+}
+.Profilkép{
+    float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.Munkáim{
+    float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.videojatekok{
+    float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.sor::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.sor{
+    padding: 50px;
+
+}
+.Profilkép {
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+  .Munkáim {
+      position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+  .videojatekok{
+      position: relative;
+    width: 50%;
+    max-width: 300px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .Profilkép:hover .overlay {
+    opacity: 1;
+  }
+  .Munkáim:hover .overlay {
+      opacity: 1;
+  }
+  .videojatekok:hover .overlay{
+      opacity: 1;
+  }
+nav{
+    grid-area: n;
+}
+nav h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+    font-size: 300%;
+}
+@media only screen and (max-width: 600px) {
+    main{
+        max-width: 1000px;
+        margin: auto;
+        display:grid;
+        background: #350200;
+        grid-template-areas:"h" 
+                            "n"
+                            "a"
+                            "as"
+                            "s"
+                            "f";
+        grid-template-columns: 1fr;
+    }
+    nav{
+        grid-area: n;
+    }
+    article{
+        grid-area: a;
+    }
+    aside{
+        grid-area: as;
+    }
+    section{
+        grid-area: s;
+    }
+    footer{
+        grid-area: f;
+        }
+}

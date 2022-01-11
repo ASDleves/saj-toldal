@@ -1,0 +1,106 @@
+
+body{
+    background-image: url(Képek/magamrolhatterkep.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+main{
+    max-width: 900px;
+    margin: auto;
+    display:grid;
+    background: rgba(0, 0, 0, 0.5);
+    grid-template-areas:"h  h  h" 
+                        "n  n  n"
+                        "as a  a"
+                        "s  s  s"
+                        "f  f  f";
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+header{
+    background-image: url(Képek/felhő.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+nav u{
+    overflow:hidden;
+    color: black;
+}
+nav li {
+text-decoration-color: black;
+display:inline-block;
+text-decoration: none;
+width: 30%;
+padding: 10px;
+
+    }
+nav ul li a{
+    color: black;
+    font-size: 1cm;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+
+article{
+    grid-area: a;
+    color: white;
+
+}
+aside{
+    grid-area: as;
+}
+
+aside img{
+    height: 200px;
+    width: 200px;
+    padding: 40px;
+}
+section{
+    grid-area: s;
+}
+footer{
+    grid-area: f;
+}
+
+@media only screen and (max-width: 600px) {
+    main{
+        max-width: 1000px;
+        margin: auto;
+        display:grid;
+        background: rgba(0, 0, 0, 0.5);
+        grid-template-areas:"h" 
+                            "n"
+                            "a"
+                            "as"
+                            "s"
+                            "f";
+        grid-template-columns: 1fr;
+    }
+    nav{
+        grid-area: n;
+        grid-template-columns: 1fr;
+    }
+    article{
+        grid-area: a;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        grid-area: as;
+    }
+    section{
+        grid-area: s;
+    }
+    footer{
+        grid-area: f;
+        }
+    }

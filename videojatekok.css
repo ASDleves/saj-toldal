@@ -1,0 +1,112 @@
+body{
+    background-image: url(Képek/hatter2.jpg);
+}
+main{
+    max-width: 1000px;
+    margin: auto;
+    display:grid;
+    background: black;
+    grid-template-areas:"h  h  h" 
+                        "n  n  n"
+                        "a  a  a"
+                        "as as as"
+                        "s  s  s"
+                        "f  f  f";
+
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+header{
+    font-size: 300%;
+    height: 200px;
+    grid-area: h;
+    text-align: center;
+    padding-top: 30px;
+}
+header h1{
+    color: white;
+}
+
+article{
+    grid-area: a;
+    background-color: black;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+article h1{
+    text-align: center;
+    font-size: 200%;
+    color:white;
+    
+}
+aside{
+    grid-area: as;
+}
+aside table{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+table, th, td {
+    border:1px solid white;
+    width: 70%;
+    padding: 10px;
+  }
+nav {
+    grid-area: n;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+nav u{
+    overflow:hidden;
+    color: black;
+}
+nav li {
+text-decoration-color: black;
+display:inline-block;
+text-decoration: none;
+width: 30%;
+padding: 10px;
+
+    }
+nav ul li a{
+    color: white;
+    font-size: 1cm;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+}
+footer{
+    height: 100px;
+}
+@media only screen and (max-width: 600px) {
+    main{
+        max-width: 1000px;
+        margin: auto;
+        display:grid;
+        background: black;
+        grid-template-areas:"h" 
+                            "n"
+                            "a"
+                            "as"
+                            "s"
+                            "f";
+        grid-template-columns: 1fr;
+    }
+    nav{
+        grid-area: n;
+    }
+    article{
+        grid-area: a;
+    }
+    aside{
+        grid-area: as;
+    }
+    section{
+        grid-area: s;
+    }
+    footer{
+        grid-area: f;
+        }
+}
